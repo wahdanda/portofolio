@@ -21,7 +21,9 @@ function Navbar() {
             <a href="Footer.jsx">footer</a>
           </li>
           <li >
-            <button className=" outline-2 outline-blue-500 hover:outline-white rounded-xl p-2 hover:bg-blue-500 transition duration-300 font-lato" href=".../assets/file/manual.docx" download>Download CV</button>
+            <button className=" outline-2 outline-blue-500 hover:outline-white rounded-xl p-2 hover:bg-blue-500 transition duration-300 font-lato"> 
+              <a href=".../assets/file/manual.docx" download>Download CV</a>
+            </button>
           </li>
       </ul>
     </nav>
