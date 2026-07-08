@@ -6,13 +6,13 @@ function Navbar() {
       <p className="text-2xl font-bold font-inika ml-40">Danda.</p>
       <ul className="flex space-x-4 justify-center gap-6 ">
         <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2">
-            <a href="Hero.jsx">Home</a>
+            <a href="#Hero">Home</a>
         </li>
           <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2">
-            <a href="About.jsx">About</a>
+            <a href="#About">About</a>
           </li>
           <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2">
-            <a href="Skill.jsx">Skill</a>
+            <a href="#Skill">Skill</a>
           </li>
           <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2">
             <a href="Project.jsx">Project</a>
@@ -29,7 +29,7 @@ function Navbar() {
     </nav>
 
     <div className="floating fixed bottom-0 right-0 m-4 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 cursor-pointer">
-      <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/6281337514360" target="_blank" rel="noopener noreferrer">
         <Icon icon="mdi:whatsapp" height="2em" className="text-white" />
       </a>
     </div>

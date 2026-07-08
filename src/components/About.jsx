@@ -2,7 +2,8 @@ import { Icon } from "@iconify/react";
 
 function About() {
     return (
-        <div className=" bg-white items-start text-black py-5 px-48 w-screen -ml-48">
+        <section id="About">
+        <div className=" bg-white items-start text-black py-15 px-48 w-screen -ml-48">
             <h1 className="text-left text-blue-500 font-inika font-bold">About Us</h1>
             <div className="flex gap-3 justify-between">            
                 <div className="text-left grid gap-2 w-170">
@@ -46,6 +47,7 @@ function About() {
             </div>
 
         </div>
+        </section>
     );
 }
 export default About;
