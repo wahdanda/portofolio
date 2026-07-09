@@ -52,7 +52,7 @@ function Navbar() {
         <a href="#Contact" className="block py-3">Contact</a>
 
         <button className="mt-4 w-full bg-blue-500 py-3 rounded-lg">
-            Download CV
+            <a href={`${import.meta.env.BASE_URL}CV.pdf`}>Download CV</a>
         </button>
 
     </div>
