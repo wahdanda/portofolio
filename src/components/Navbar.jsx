@@ -23,7 +23,7 @@ function Navbar() {
 
         {/* Desktop Button */}
         <button className="hidden md:block border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 transition hover:border-white">
-            Download CV
+            <a href={`${import.meta.env.BASE_URL}CV.pdf`}>Download CV</a>
         </button>
 
         {/* Hamburger */}
