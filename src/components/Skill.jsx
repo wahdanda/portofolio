@@ -46,7 +46,7 @@ const skills = [
     function Skill() {
     return (
         <section
-        id="skill"
+        id="Skill"
         className="bg-[#050816] min-h-screen px-10 py-24"
         >
         <p className="text-blue-500 uppercase tracking-widest font-semibold">

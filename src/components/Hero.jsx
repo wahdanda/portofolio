@@ -1,28 +1,71 @@
 import { Icon } from "@iconify/react";
 
-
 function Hero() {
     return (
-        <div id="Hero" className="bg-black  text-white p-5 flex justify-left items-center h-screen">
-            <div className="text-left ">
-                <p className=" mb-4 font-lato">Hello, I'm</p>
-                <h1 className="text-3xl  font-bold font-inika">Gusti Ngurah Danda Hasta</h1>
-                <h1 className="text-4xl font-semibold mb-4 text-blue-500 font-inika">Web Developer</h1>
-                <p className="mb-8 w-100 font-lato">I build responsive and modern websites using HTML, CSS, Tailwind CSS, JavaScript, react and MySQL.</p>
-                <a href="#about" className=" flex gap-4 bg-blue-500 w-40 p-3  rounded-md hover:bg-blue-600 transition-colors cursor-pointer hover:-translate-y-2 *:transition-transform duration-300">View My Work <Icon icon="line-md:arrow-right" className="mt-1" /></a> 
-                <div className="flex gap-5 mt-8">
-                    <a href="https://github.com/wahdanda" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-blue-500">
-                        <Icon icon="mdi:github" height="3em" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/gusti-ngurah-danda-hasta-7b59a1420" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-blue-500">
-                        <Icon icon="prime:linkedin" height="3em" />
-                    </a>
-                    <a href="gstngrdandahasta@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300 hover:text-blue-500">
-                        <Icon icon="mdi:gmail" height="3em" />
-                    </a>
-                </div>
+        <section
+        id="Hero"
+        className="bg-black text-white min-h-screen flex  pt-19 items-center px-6 sm:px-10 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
+        >
+        <div className="max-w-3xl">
+
+            <p className="mb-4 font-lato text-base sm:text-lg">
+            Hello, I'm
+            </p>
+
+            <h1 className="font-inika font-bold leading-tight text-4xl sm:text-2xl lg:text-2xl">
+            Gusti Ngurah Danda Hasta
+            </h1>
+
+            <h2 className="font-inika text-blue-500 font-bold mt-2 text-4xl sm:text-2xl lg:text-2xl">
+            Web Developer
+            </h2>
+
+            <p className="mt-6 text-gray-300 leading-8 max-w-xl text-base sm:text-xs">
+            I build responsive and modern websites using HTML, CSS,
+            Tailwind CSS, JavaScript, React and MySQL.
+            </p>
+
+            {/* Button */}
+            <a
+            href="#About"
+            className="inline-flex items-center gap-3 mt-10 bg-blue-500 px-8 py-4 rounded-xl hover:bg-blue-600 hover:-translate-y-1 duration-300"
+            >
+            View My Work
+            <Icon icon="line-md:arrow-right" width="24" />
+            </a>
+
+            {/* Social */}
+            <div className="flex gap-6 mt-10">
+
+            <a
+                href="https://github.com/wahdanda"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-500 hover:scale-110 duration-300"
+            >
+                <Icon icon="mdi:github" className="text-4xl sm:text-5xl" />
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/gusti-ngurah-danda-hasta-7b59a1420"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-500 hover:scale-110 duration-300"
+            >
+                <Icon icon="prime:linkedin" className="text-4xl sm:text-5xl" />
+            </a>
+
+            <a
+                href="mailto:gstngrdandahasta@gmail.com"
+                className="hover:text-blue-500 hover:scale-110 duration-300"
+            >
+                <Icon icon="mdi:gmail" className="text-4xl sm:text-5xl" />
+            </a>
+
             </div>
         </div>
+        </section>
     );
 }
+
 export default Hero;
