@@ -1,10 +1,14 @@
 import { Icon } from "@iconify/react";
+import Lanyard from "./Lanyard";
+import foto from "../assets/foto.jpg";
+
 
 function Hero() {
     return (
+        <>
         <section
         id="Hero"
-        className="bg-black text-white min-h-screen flex  pt-19 items-center px-6 sm:px-10 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
+        className="bg-black text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-20 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
         >
         <div className="max-w-3xl">
 
@@ -64,7 +68,15 @@ function Hero() {
 
             </div>
         </div>
+            <div className=" w-full lg:w-1/2 h-150">
+                <Lanyard
+                    position={[0, 0, 20]}
+                    gravity={[0, -40, 0]}
+                    frontImage={foto}
+                />
+            </div>
         </section>
+        </>
     );
 }
 
