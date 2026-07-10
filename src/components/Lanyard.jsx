@@ -202,7 +202,7 @@ console.log(backTex.image);
   useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
   useSphericalJoint(j3, card, [
     [0, 0, 0],
-    [0, 1.5, 0]
+    [0, 2.4, 0]
   ]);
 
   useEffect(() => {
@@ -259,7 +259,7 @@ console.log(backTex.image);
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
           <group
-            scale={2.25}
+            scale={3}
             position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
@@ -270,7 +270,7 @@ console.log(backTex.image);
             )}
           >
             <mesh geometry={nodes.card.geometry}>
-             <meshPhysicalMaterial
+            <meshPhysicalMaterial
                   map={cardMap}
                   map-anisotropy={16}
                   clearcoat={isMobile ? 0 : 1}

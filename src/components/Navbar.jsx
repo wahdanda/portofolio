@@ -59,10 +59,10 @@ function Navbar() {
     )}
     </nav>
 
-    <div className="floating fixed bottom-5 right-5 -ml-40 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 cursor-pointer">
-      <a href="https://wa.me/6281337514360" target="_blank" rel="noopener noreferrer">
-        <Icon icon="mdi:whatsapp" height="2em" className="text-white" />
-      </a>
+    <div className="floating fixed bottom-5 right-5 -ml-40 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 cursor-pointer z-10">
+        <a href="https://wa.me/6281337514360" target="_blank" rel="noopener noreferrer">
+            <Icon icon="mdi:whatsapp" height="2em" className="text-white" />
+        </a>
     </div>
     </>
 

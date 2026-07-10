@@ -61,13 +61,14 @@ body {
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
+  border-inline:none;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
 }
 
-h1{
+h1,h2{
   font-family: inika;
 }
 
