@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import logo from "../assets/logo.png"
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,8 +9,8 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-screen  bg-[#111827] text-white z-50">
     <div className="max-w-7xl mx-auto flex justify-between  items-center px-6 py-5 xl:pl-34 xl:pr-36">
 
-        <h1 className="text-2xl font-bold font-inika">
-            Danda.
+        <h1 className="text-2xl font-bold font-inika flex">
+            <img src={logo} className="w-10 h-10 mr-3"></img>
         </h1>
 
         {/* Desktop Menu */}
@@ -22,7 +23,7 @@ function Navbar() {
         </ul>
 
         {/* Desktop Button */}
-        <button className="hidden md:block border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 transition hover:border-white">
+        <button className="hidden md:block border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 transition hover:border-white  hover:-translate-y-1 ease-in-out hover:scale-110 duration-300">
             <a href={`${import.meta.env.BASE_URL}CV.pdf`}>Download CV</a>
         </button>
 

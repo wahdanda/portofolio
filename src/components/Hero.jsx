@@ -8,6 +8,8 @@ function Hero() {
     return (
         <>
         <section
+        data-aos="fade-up"
+        data-aos-duration="1200"
         id="Hero"
         className="bg-black text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
         >
@@ -17,23 +19,23 @@ function Hero() {
             Hello, I'm
             </p>
 
-            <h1 className="font-inika font-bold leading-tight text-4xl sm:text-2xl lg:text-2xl">
+            <h1 data-aos="fade-up" data-aos-duration="1300" className="font-inika font-bold leading-tight text-4xl sm:text-2xl lg:text-2xl">
             Gusti Ngurah Danda Hasta
             </h1>
 
-            <h2 className="font-inika text-blue-500 font-bold mt-2 text-4xl sm:text-2xl lg:text-2xl">
+            <h2 data-aos="fade-up" data-aos-duration="1400" className="font-inika text-blue-500 font-bold mt-2 text-4xl sm:text-2xl lg:text-2xl">
             Web Developer
             </h2>
 
-            <p className="mt-6 text-gray-300 leading-8 max-w-xl text-base sm:text-xs">
+            <p  data-aos="fade-up" data-aos-duration="1500" className="mt-6 text-gray-300 leading-8 max-w-xl text-base sm:text-xs">
             I build responsive and modern websites using HTML, CSS,
             Tailwind CSS, JavaScript, React and MySQL.
             </p>
 
             {/* Button */}
-            <a
+            <a data-aos="fade-up" data-aos-duration="1600"
             href="#Project"
-            className="inline-flex items-center gap-3 mt-10 bg-blue-500 px-8 py-4 rounded-xl hover:bg-blue-600 hover:-translate-y-1 duration-300"
+            className="inline-flex items-center gap-3 mt-10 bg-blue-500 px-8 py-4 rounded-xl hover:bg-blue-600 hover:-translate-y-1 ease-in-out hover:scale-110 duration-300"
             >
             View My Work
             <Icon icon="line-md:arrow-right" width="24" />

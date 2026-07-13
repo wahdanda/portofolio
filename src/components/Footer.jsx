@@ -3,6 +3,8 @@ import { Icon } from "@iconify/react";
 function Footer() {
     return (
         <footer
+        data-aos="fade-up"
+        data-aos-duration="1200"
         id="Contact"
         className="bg-[#0B1220] border-t text-left border-white/10 text-white py-16 px-6 md:px-12"
         >
@@ -18,18 +20,21 @@ function Footer() {
 
             {/* Left */}
             <div className="">
-                <h2 className="text-4xl font-bold mb-4">
+                <h2 data-aos="fade-up"
+        data-aos-duration="1300" className="text-4xl font-bold mb-4">
                 Let's Work Together
                 </h2>
 
-                <p className="text-gray-400 leading-8 w">
+                <p data-aos="fade-up"
+        data-aos-duration="1400" className="text-gray-400 leading-8 w">
                 I'm open to new opportunities and collaborations.
                 Feel free to contact me anytime.
                 </p>
             </div>
             <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-4            ">
             {/* Email */}
-                <div className="space-y-2">
+                <div data-aos="fade-up"
+        data-aos-duration="1200" className="space-y-2">
                     <div className="flex items-center gap-3 font-semibold">
                     <Icon
                         icon="line-md:email"
@@ -49,10 +54,11 @@ function Footer() {
                 </div>
 
                 {/* Location */}
-                <div className="space-y-2">
+                <div data-aos="fade-up"
+        data-aos-duration="1300" className="space-y-2">
                     <div className="flex items-center gap-3 font-semibold">
                     <Icon
-                        icon="mdi:map-marker"
+                        icon="line-md:map-marker"
                         className="text-2xl text-blue-500"
                     />
                     Location
@@ -66,10 +72,11 @@ function Footer() {
                 </div>
 
                 {/* Github + Linkedin */}
-                    <div>
+                    <div data-aos="fade-up"
+        data-aos-duration="1400">
                     <div className="flex items-center gap-3 font-semibold mb-2 space-y-2">
                         <Icon
-                        icon="mdi:github"
+                        icon="line-md:github"
                         className="text-2xl text-blue-500"
                         />
                         GitHub
@@ -84,10 +91,11 @@ function Footer() {
                     </a>
                     </div>
 
-                    <div className=" items-center gap-3 font-semibold mb-2 space-y-2">
+                    <div data-aos="fade-up"
+        data-aos-duration="1500" className=" items-center gap-3 font-semibold mb-2 space-y-2">
                     <div className="flex items-center gap-3 font-semibold mb-2">
                         <Icon
-                        icon="mdi:linkedin"
+                        icon="line-md:linkedin"
                         className="text-2xl text-blue-500"
                         />
                         LinkedIn

@@ -3,6 +3,8 @@ import { Icon } from "@iconify/react";
 function About() {
     return (
         <section
+        data-aos="fade-up"
+        data-aos-duration="1200"
         id="About"
         className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-2 xl:w-screen xl:-ml-48"
         >
@@ -17,27 +19,29 @@ function About() {
                 Who I Am
             </h1>
 
-            <p className="text-gray-700 leading-8 mb-6 xl:w-110">
+            <p data-aos="fade-up" data-aos-duration="1300" className="text-gray-700 leading-8 mb-6 xl:w-110">
                 I am a vocational student majoring in Software Engineering (RPL)
                 with a strong passion for web development. I enjoy turning ideas
                 into real websites that are useful and user-friendly.
             </p>
 
-            <p className="text-gray-700 leading-8 mb-8 xl:w-110" >
+            <p data-aos="fade-up" data-aos-duration="1400" className="text-gray-700 leading-8 mb-8 xl:w-110" >
                 My goal is to become a Full-Stack Developer and study in Australia
                 to gain knowledge, experience, and build a better future.
             </p>
 
-            <button className="flex items-center gap-2 border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-xl hover:bg-blue-500 hover:text-white hover:border-white duration-300">
-                Read More About Me
-                <Icon icon="ic:outline-person" width="22" />
+            <button data-aos="fade-up" data-aos-duration="1400" className="flex items-center gap-2 border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-xl hover:bg-blue-500 hover:text-white hover:border-white duration-300 hover:-translate-y-1 ease-in-out hover:scale-110">
+                <a href={`${import.meta.env.BASE_URL}CV.pdf`} className="flex gap-2">
+                    Read More About Me
+                    <Icon icon="ic:outline-person" width="22" />
+                </a>
             </button>
             </div>
 
             {/* Right */}
-            <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-300 rounded-xl overflow-hidden shadow-xl">
+            <div data-aos="fade-up" data-aos-duration="1400" className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-300 rounded-xl overflow-hidden shadow-xl">
 
-                <div className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b sm:border-r">
+                <div data-aos="fade-up" data-aos-duration="1200" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b sm:border-r">
                     <Icon
                     icon="material-symbols:school-outline"
                     className="text-blue-500 text-5xl xl:w-20"
@@ -51,7 +55,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b">
+                <div data-aos="fade-up" data-aos-duration="1300" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b">
                     <Icon
                     icon="mdi:map-marker-outline"
                     className="text-blue-500 text-5xl"
@@ -65,7 +69,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b sm:border-b-white sm:border-r">
+                <div data-aos="fade-up" data-aos-duration="1400" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b sm:border-b-white sm:border-r">
                     <Icon
                     icon="mdi:target"
                     className="text-blue-500 text-5xl xl:w-20"
@@ -79,7 +83,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className="flex gap-4 p-6 xl:py-6 xl:px-2">
+                <div data-aos="fade-up" data-aos-duration="1500" className="flex gap-4 p-6 xl:py-6 xl:px-2">
                     <Icon
                     icon="mdi:heart-outline"
                     className="text-blue-500 text-5xl xl:w-20"
