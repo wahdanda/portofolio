@@ -6,15 +6,23 @@ import "swiper/css/navigation";
 
 // Import gambar project
 import project1 from "../assets/catur.png";
+import undangan from "../assets/undangan.png"
 
 const projects = [
     {
         title: "Cheas",
         image: project1,
-        desc: "Website for laundry service business with modern design.",
+        desc: "An interactive web-based chess game with official rules, move validation, a turn system, and a modern, responsive interface.",
         tech: ["HTML", "CSS", "JavaScrip"],
         link:"http://wahdanda.github.io/catur/catur.html",
     },
+    {
+        title: "invitation",
+        image: undangan,
+        desc: "Modern Digital Invitation Website with elegant design, smooth animation, background music, event countdown, photo gallery, Google Maps, RSVP, and responsive display on all devices.",
+        tech: ["HTML","CSS","JavaScrip"],
+        link:"https://wahdanda.github.io/gabungan-code-undangan/gabungan.html",
+    }
 ];
 
 function Project() {
@@ -54,14 +62,14 @@ function Project() {
             >
             {projects.map((project, index) => (
                 <SwiperSlide key={index}>
-                <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 duration-500">
+                <div className="bg-white rounded-3xl overflow-hidden outline-2 hover:-translate-y-2 duration-500 ml-0.5 mb-0.5">
                     <a href={project.link}>
                     <img src={project.image} alt={project.title} className="w-full h-56 object-cover"/>
                     <div className="p-6">
                     <h3 className="text-2xl font-bold text-gray-800">
                         {project.title}
                     </h3>
-                    <p className="text-gray-500 mt-2 leading-7">
+                    <p className=" text-gray-500 mt-2 leading-7">
                         {project.desc}
                     </p>
                     <div className="flex flex-wrap gap-2 mt-6">

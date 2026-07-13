@@ -32,7 +32,7 @@ function Hero() {
 
             {/* Button */}
             <a
-            href="#About"
+            href="#Project"
             className="inline-flex items-center gap-3 mt-10 bg-blue-500 px-8 py-4 rounded-xl hover:bg-blue-600 hover:-translate-y-1 duration-300"
             >
             View My Work
