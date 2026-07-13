@@ -15,7 +15,7 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 font-lato">
-            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#Hero">Home</a></li>
+            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2 " ><a href="#Hero">Home</a></li>
             <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#About">About</a></li>
             <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#Skill">Skill</a></li>
             <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#Project">Project</a></li>
@@ -39,25 +39,81 @@ function Navbar() {
 
     </div>
 
-    {menuOpen && (
-    <div className="md:hidden bg-[#111827] px-6 pb-5">
+    <div
+        className={`md:hidden absolute top-20 left-0 w-full bg-[#0F172A]
+        overflow-hidden transition-all duration-500 ease-in-out
+        ${menuOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0"}`}
+        >
+        <div className="flex flex-col items-center gap-6 py-8">
 
-        <a href="#Hero" className="block py-3">Home</a>
+            <a
+            href="#Hero"
+            className={`transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "100ms" }}
+            onClick={() => setMenuOpen(false)}
+            >
+            Home
+            </a>
 
-        <a href="#About" className="block py-3">About</a>
+            <a
+            href="#About"
+            className={`transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+            onClick={() => setMenuOpen(false)}
+            >
+            About
+            </a>
 
-        <a href="#Skill" className="block py-3">Skill</a>
+            <a
+            href="#Skill"
+            className={`transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "300ms" }}
+            onClick={() => setMenuOpen(false)}
+            >
+            Skill
+            </a>
 
-        <a href="#Project" className="block py-3">Project</a>
+            <a
+            href="#Project"
+            className={`transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "400ms" }}
+            onClick={() => setMenuOpen(false)}
+            >
+            Project
+            </a>
 
-        <a href="#Contact" className="block py-3">Contact</a>
+            <a
+            href="#Contact"
+            className={`transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "500ms" }}
+            onClick={() => setMenuOpen(false)}
+            >
+            Contact
+            </a>
 
-        <button className="mt-4 w-full bg-blue-500 py-3 rounded-lg">
-            <a href={`${import.meta.env.BASE_URL}CV.pdf`}>Download CV</a>
-        </button>
+            <button
+            className={`w-[90%] bg-blue-500 py-3 rounded-xl font-semibold hover:bg-blue-600 transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "600ms" }}
+            >
+            <a href={`${import.meta.env.BASE_URL}CV.pdf`}>
+                Download CV
+            </a>
+            </button>
 
-    </div>
-    )}
+        </div>
+        </div>
     </nav>
 
     <div className="floating fixed bottom-5 right-5 -ml-40 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 cursor-pointer z-10">
@@ -67,7 +123,7 @@ function Navbar() {
     </div>
     </>
 
-  );
+    );
 }
 
 export default Navbar;
