@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import Lanyard from "./Lanyard";
-import foto from "../assets/foto.jpg";
-import tali from "../assets/tali.png";
+import foto from "../assets/img/foto.jpg";
+import tali from "../assets/img/tali.png";
 
 
 function Hero() {

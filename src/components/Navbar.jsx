@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import logo from "../assets/logo.png"
+import logo from "../assets/logo/logo1.png"
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>    
-    <nav className="fixed top-0 left-0 w-screen  bg-[#111827] text-white z-50">
+    <nav className="fixed top-0 left-0 w-screen  bg-[#111827] text-white z-50 outline-1">
     <div className="max-w-7xl mx-auto flex justify-between  items-center px-6 py-5 xl:pl-34 xl:pr-36">
 
         <h1 className="text-2xl font-bold font-inika flex">

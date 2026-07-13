@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // Import gambar project
-import project1 from "../assets/catur.png";
-import undangan from "../assets/undangan.png"
+import project1 from "../assets/img/catur.png";
+import undangan from "../assets/img/undangan.png"
 
 const projects = [
     {
