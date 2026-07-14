@@ -13,7 +13,7 @@ function Hero() {
         data-aos="fade-up"
         data-aos-duration="1200"
         id="Hero"
-        className="relative overflow-hidden  text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left xl:pl-20"
+        className=" bg-black relative overflow-hidden  text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left xl:pl-20"
         >
         <div className="max-w-3xl">
 
