@@ -65,7 +65,7 @@ function Skill() {
         id="Skill"
         data-aos="fade-up"
         data-aos-duration="1200"
-        className="bg-[#050816] min-h-screen px-6 md:px-10 py-24"
+        className="bg-[#050816] min-h-screen px-6 md:px-10 py-24 " 
         >
         {/* Heading */}
         <p className="text-blue-500 uppercase tracking-widest font-semibold">

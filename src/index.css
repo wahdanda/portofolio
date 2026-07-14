@@ -56,7 +56,7 @@ body {
 }
 
 #root {
-  width: 1126px;
+
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -68,11 +68,11 @@ body {
   box-sizing: border-box;
 }
 
-h1,h2{
+h1, h2{
   font-family: inika;
 }
 
-p{
+p, a{
   font-family: lato;
 }
 

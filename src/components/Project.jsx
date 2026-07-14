@@ -32,7 +32,7 @@ const projects = [
 function Project() {
     return (
         <section id="Project" data-aos="fade-up"
-        data-aos-duration="1200" className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-2 xl:w-screen xl:-ml-48">
+        data-aos-duration="1200" className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-">
         <div className="max-w-7xl mx-auto px-6">
             {/* Heading */}
             <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:ml-36 mb-12">

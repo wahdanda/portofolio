@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import Lanyard from "./Lanyard";
 import foto from "../assets/img/foto.jpg";
 import tali from "../assets/img/tali.png";
+import Particles from './Particles';
 
 
 function Hero() {
@@ -11,9 +12,24 @@ function Hero() {
         data-aos="fade-up"
         data-aos-duration="1200"
         id="Hero"
-        className="bg-black text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
+        className="relative overflow-hidden text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
         >
         <div className="max-w-3xl">
+
+            {/* Background Liquid Chrome */}
+            <div className="absolute inset-0 -z-10">
+            <Particles
+                particleColors={["#ffffff"]}
+                particleCount={1000}
+                particleSpread={10}
+                speed={2}
+                particleBaseSize={100}
+                moveParticlesOnHover
+                alphaParticles={false}
+                disableRotation
+                pixelRatio="1"
+            />
+            </div>
 
             <p className="mb-4 font-lato text-base sm:text-lg">
             Hello, I'm

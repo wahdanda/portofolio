@@ -6,7 +6,7 @@ function About() {
         data-aos="fade-up"
         data-aos-duration="1200"
         id="About"
-        className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-2 xl:w-screen xl:-ml-48"
+        className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-2"
         >
         <h2 className="text-blue-500 font-bold uppercase tracking-widest mb-2">
             About Me
