@@ -9,3 +9,10 @@
   transform: scale(1);
   transform-origin: center;
 }
+
+
+.lanyard-wrapper canvas{
+    width:100%;
+    height:100%;
+    display:block;
+}

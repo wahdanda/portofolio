@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import TargetCursor from './TargetCursor';
 
 const skills = [
     {
@@ -65,8 +66,18 @@ function Skill() {
         id="Skill"
         data-aos="fade-up"
         data-aos-duration="1200"
-        className="bg-[#050816] min-h-screen px-6 md:px-10 py-24 " 
+        className="relative target-cursor-area bg-[#050816] min-h-screen px-6 md:px-10 py-24 " 
         >
+        <TargetCursor 
+            containerSelector="#Skill"
+            targetSelector=".cursor-target"
+            spinDuration={2}
+            hideDefaultCursor
+            parallaxOn
+            hoverDuration={0.2}
+            cursorColor="#ffffff"
+            cursorColorOnTarget="#131ad5"
+        />
         {/* Heading */}
         <p className="text-blue-500 uppercase tracking-widest font-semibold">
             Skills
@@ -84,7 +95,7 @@ function Skill() {
                 data-aos={skill.aos}
                 data-aos-delay={skill.delay}
                 data-aos-duration="800"
-                className="bg-[#111827] border border-gray-700 rounded-2xl p-6 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
+                className="cursor-target bg-[#111827] border border-gray-700 rounded-2xl p-6 hover:-translate-y-2 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
             >
                 {/* Icon */}
                 <div className="flex justify-center mb-5">

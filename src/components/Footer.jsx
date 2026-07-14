@@ -122,7 +122,7 @@ function Footer() {
 
             <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="w-12 h-12 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-blue-500 transition flex items-center justify-center"
+                className="w-12 h-12 rounded-xl border border-white/10 hover:border-blue-500 hover:bg-blue-500 transition flex items-center justify-center  md:mr-30"
             >
                 <Icon
                 icon="mingcute:arrow-up-line"

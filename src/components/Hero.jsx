@@ -3,6 +3,7 @@ import Lanyard from "./Lanyard";
 import foto from "../assets/img/foto.jpg";
 import tali from "../assets/img/tali.png";
 import Particles from './Particles';
+import TextType from './TextType';
 
 
 function Hero() {
@@ -12,7 +13,7 @@ function Hero() {
         data-aos="fade-up"
         data-aos-duration="1200"
         id="Hero"
-        className="relative overflow-hidden text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left"
+        className="relative overflow-hidden  text-white min-h-screen grid grid-cols-1 pt-19 items-center px-6 sm:px-10 sm:gap-1 sm:grid-cols-2 sm:text-left lg:px-10 lg:justify-left xl:px-5 xl:justify-left xl:pl-20"
         >
         <div className="max-w-3xl">
 
@@ -40,7 +41,19 @@ function Hero() {
             </h1>
 
             <h2 data-aos="fade-up" data-aos-duration="1400" className="font-inika text-blue-500 font-bold mt-2 text-4xl sm:text-2xl lg:text-2xl">
-            Web Developer
+            <TextType 
+            text={["Web Developer"]}
+            typingSpeed={130}
+            pauseDuration={1200}
+            showCursor={false}
+            cursorCharacter="|"
+            texts={["Web Developer"]}
+            deletingSpeed={130}
+            variableSpeedEnabled={false}
+            variableSpeedMin={80}
+            variableSpeedMax={300}
+            cursorBlinkDuration={1.3}
+            />
             </h2>
 
             <p  data-aos="fade-up" data-aos-duration="1500" className="mt-6 text-gray-300 leading-8 max-w-xl text-base sm:text-xs">
@@ -87,7 +100,7 @@ function Hero() {
 
             </div>
         </div>
-            <div className=" w-full h-175 ">
+            <div className="  w-full  h-175 ">
                 <Lanyard
                     position={[0, 0, 20]}
                     gravity={[0, -40, 0]}
