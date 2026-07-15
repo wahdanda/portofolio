@@ -12,7 +12,7 @@ function About() {
             About Me
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center md:justify-between md:text-left xl:px-50 ">
+        <div className="flex flex-col lg:flex-row gap-12 items-center md:justify-between md:text-left xl:px-20 ">
             {/* Left */}
             <div className="lg:w-1/2">
             <h1 className="text-4xl font-bold font-inika mb-2">
@@ -55,12 +55,12 @@ function About() {
                     </div>
                 </div>
 
-                <div data-aos="fade-up" data-aos-duration="1300" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b">
+                <div data-aos="fade-up" data-aos-duration="1300" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b ">
                     <Icon
                     icon="mdi:map-marker-outline"
-                    className="text-blue-500 text-5xl"
+                    className="text-blue-500 w-20 text-5xl"
                     />
-                    <div>
+                    <div className="w-88">
                     <h3 className="font-bold text-xl mb-2">Location</h3>
                     <p className="text-gray-600">
                         Bali,

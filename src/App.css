@@ -6,6 +6,8 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
 
 
 @keyframes floating {

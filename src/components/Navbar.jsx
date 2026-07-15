@@ -1,13 +1,21 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 import logo from "../assets/logo/logo1.png"
+import GooeyNav from './GooeyNav'
 
 function Navbar() {
+    const items = [
+  { label: "Home", href: "#Hero" },
+  { label: "About", href: "#About" },
+  { label: "Skill", href: "#Skill" },
+  { label: "Project", href: "#Project" },
+  { label: "Contact", href: "#Contact" },
+];
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>    
     <nav className="fixed top-0 left-0 w-screen  bg-[#111827] text-white z-50 outline-1">
-    <div className="max-w-7xl mx-auto flex justify-between  items-center px-6 py-5 xl:pl-34 xl:pr-36">
+    <div className=" mx-auto flex justify-between  items-center px-6 py-5 xl:px-20">
 
         <h1 className="text-2xl font-bold font-inika flex">
             <img src={logo} className="w-10 h-10 mr-3"></img>
@@ -15,11 +23,18 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 font-lato">
-            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2 " ><a href="#Hero">Home</a></li>
-            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#About">About</a></li>
-            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#Skill">Skill</a></li>
-            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#Project">Project</a></li>
-            <li className="hover:underline underline-offset-20 decoration-2 decoration-transparent hover:decoration-blue-500 transition duration-300 font-lato mt-2"><a href="#Contact">Contact</a></li>
+            <div >
+                <GooeyNav
+                    items={items}
+                    particleCount={10}
+                    particleDistances={[90, 10]}
+                    particleR={100}
+                    initialActiveIndex={0}
+                    animationTime={600}
+                    timeVariance={100}
+                    colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+                />
+                </div>
         </ul>
 
         {/* Desktop Button */}
