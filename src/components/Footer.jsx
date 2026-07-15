@@ -6,7 +6,7 @@ function Footer() {
         data-aos="fade-up"
         data-aos-duration="1200"
         id="Contact"
-        className="bg-[#0B1220] border-t text-left border-white/10 text-white py-16 px-6 md:px-12"
+        className="bg-[#0B1220] border-t text-left border-white/10 text-white py-16 px-6 md:px-12 xl:px-20"
         >
         <div className="max-w-7xl mx-auto">
 
