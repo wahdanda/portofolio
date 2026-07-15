@@ -2,7 +2,7 @@ import { Icon } from "@iconify/react";
 import Lanyard from "./Lanyard";
 import foto from "../assets/img/foto.jpg";
 import tali from "../assets/img/tali.png";
-import Particles from './Particles';
+import ColorBends from './ColorBends';
 import TextType from './TextType';
 
 
@@ -19,16 +19,22 @@ function Hero() {
 
             {/* Background Liquid Chrome */}
             <div className="absolute inset-0 -z-10">
-            <Particles
-                particleColors={["#ffffff"]}
-                particleCount={1000}
-                particleSpread={10}
-                speed={2}
-                particleBaseSize={100}
-                moveParticlesOnHover
-                alphaParticles={false}
-                disableRotation
-                pixelRatio="1"
+            <ColorBends
+                colors={["#000eff"]}
+                rotation={90}
+                speed={0.2}
+                scale={1}
+                frequency={1}
+                warpStrength={1}
+                mouseInfluence={1}
+                noise={0.15}
+                parallax={0.5}
+                iterations={1}
+                intensity={1.5}
+                bandWidth={6}
+                transparent
+                autoRotate={0}
+                color="#000eff"
             />
             </div>
 
