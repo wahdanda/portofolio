@@ -71,7 +71,7 @@ function Project() {
                 <SwiperSlide key={index} className="p-2">
                 <div data-aos={project.aos}
                 data-aos-delay={project.delay}
-                data-aos-duration="800" className=" bg-white rounded-3xl overflow-hidden outline-2 hover:-translate-y-2 duration-500 h-full flex flex-col ">
+                data-aos-duration="800" className=" w-64 bg-white rounded-3xl overflow-hidden outline-2 hover:-translate-y-2 duration-500 h-full flex flex-col ">
                     <a href={project.link}>
                     <img src={project.image} alt={project.title} className="w-full h-56 object-cover"/>
                     <div className="p-6 flex flex-col h-full">
