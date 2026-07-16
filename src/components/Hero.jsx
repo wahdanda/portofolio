@@ -38,7 +38,7 @@ function Hero() {
             />
             </div>
 
-            <p className="mb-4 font-lato text-base sm:text-lg">
+            <p className="mb-4 mt-10 font-lato text-base sm:text-lg">
             Hello, I'm
             </p>
 
@@ -102,6 +102,13 @@ function Hero() {
                 className="hover:text-blue-500 hover:scale-110 duration-300"
             >
                 <Icon icon="mdi:gmail" className="text-4xl sm:text-5xl" />
+            </a>
+
+            <a
+                href="https://www.instagram.com/dandahasta/"
+                className="hover:text-blue-500 hover:scale-110 duration-300"
+            >
+                <Icon icon="line-md:instagram" className="text-4xl sm:text-5xl" />
             </a>
 
             </div>
