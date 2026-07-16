@@ -30,12 +30,6 @@ function About() {
                 to gain knowledge, experience, and build a better future.
             </p>
 
-            <button data-aos="fade-up" data-aos-duration="1400" className="flex items-center gap-2 border-2 border-blue-500 text-blue-500 px-6 py-3 rounded-xl hover:bg-blue-500 hover:text-white hover:border-white duration-300 hover:-translate-y-1 ease-in-out hover:scale-110">
-                <a href={`${import.meta.env.BASE_URL}CV.pdf`} className="flex gap-2">
-                    Read More About Me
-                    <Icon icon="ic:outline-person" width="22" />
-                </a>
-            </button>
             </div>
 
             {/* Right */}
