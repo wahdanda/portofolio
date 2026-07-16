@@ -77,7 +77,7 @@ function Hero() {
             </a>
 
             {/* Social */}
-            <div className="flex gap-6 mt-10">
+            <div className="flex gap-6 mt-10  justify-center md:justify-start">
 
             <a
                 href="https://github.com/wahdanda"
