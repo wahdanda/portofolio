@@ -45,9 +45,9 @@ const skills = [
         delay: 500,
     },
     {
-        name: "UI Design",
-        icon: "ph:code-bold",
-        percent: 80,
+        name: "Figma",
+        icon: "logos:figma",
+        percent: 70,
         aos: "fade-up",
         delay: 600,
     },
@@ -58,6 +58,7 @@ const skills = [
         aos: "fade-up",
         delay: 700,
     },
+    
 ];
 
 function Skill() {
