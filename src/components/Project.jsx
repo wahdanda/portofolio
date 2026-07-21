@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 // Import gambar project
 import project1 from "../assets/img/catur.png";
 import undangan from "../assets/img/undangan.png"
+import savings from"../assets/img/savings.png";
 
 const projects = [
     {
@@ -24,6 +25,15 @@ const projects = [
         desc: "Modern Digital Invitation Website with elegant design, smooth animation, background music, event countdown, photo gallery, Google Maps, RSVP, and responsive display on all devices.",
         tech: ["HTML","CSS","JavaScript"],
         link:"https://wahdanda.github.io/gabungan-code-undangan/gabungan.html",
+        aos: "fade-up",
+        delay: 100,
+    },
+    {
+        title: "savings",
+        image: savings,
+        desc: "Manage your income and expenses easily, monitor your balance, and build better financial habits every day.",
+        tech: ["React","Tailwind","JavaScript"],
+        link:"https://wahdanda.github.io/Buku-Tabungan/",
         aos: "fade-up",
         delay: 100,
     }
