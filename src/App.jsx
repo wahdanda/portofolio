@@ -41,12 +41,14 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Skill />
-      <Project/>
-      <Footer/>
+      <BrowserRouter basename="/portofolio/">
+        <Navbar />
+        <Hero />
+        <About />
+        <Skill />
+        <Project/>
+        <Footer/>
+      </BrowserRouter>
     </>
   );
 }

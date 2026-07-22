@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
   <BrowserRouter basename="/portofolio/">
     <Routes>
-      {/* https://wahdanda.github.io/portofolio/ */}
+      {/* https://wahdanda.github.io/portofolio/*/}
     </Routes>
   </BrowserRouter>
 )
