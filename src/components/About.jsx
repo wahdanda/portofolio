@@ -1,101 +1,96 @@
+import { memo } from "react";
 import { Icon } from "@iconify/react";
+
+const aboutItems = [
+    {
+        icon: "material-symbols:school-outline",
+        title: "Education",
+        description: ["Vocational High School", "Software Engineering (RPL)"],
+    },
+    {
+        icon: "mdi:map-marker-outline",
+        title: "Location",
+        description: ["Bali", "Indonesia"],
+    },
+    {
+        icon: "mdi:target",
+        title: "Goal",
+        description: ["Study in Australia", "Become Full-Stack Developer"],
+    },
+    {
+        icon: "mdi:heart-outline",
+        title: "Passion",
+        description: ["Coding", "Problem Solving", "Building Websites"],
+    },
+];
 
 function About() {
     return (
         <section
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        id="About"
-        className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-2"
+            id="About"
+            aria-labelledby="about-title"
+            className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-20"
         >
-        <h2 className="text-blue-500 font-bold uppercase tracking-widest mb-2">
-            About Me
-        </h2>
+            <div className="max-w-7xl mx-auto">
+                <p
+                    id="about-title"
+                    className="text-blue-600 font-semibold uppercase tracking-widest mb-2 text-sm"
+                >
+                    About Me
+                </p>
 
-        <div className="flex flex-col lg:flex-row gap-12 items-center md:justify-between md:text-left xl:px-20 ">
-            {/* Left */}
-            <div className="lg:w-1/2">
-            <h1 className="text-4xl font-bold font-inika mb-2">
-                Who I Am
-            </h1>
+                <div className="flex flex-col lg:flex-row gap-12 items-center justify-between text-start">
+                    {/* Left Text */}
+                    <div className="lg:w-1/2">
+                        <h2 className="font-inika text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+                            Who I Am
+                        </h2>
 
-            <p data-aos="fade-up" data-aos-duration="1300" className="text-gray-700 leading-8 mb-6 xl:w-110">
-                I am a vocational student majoring in Software Engineering (RPL)
-                with a strong passion for web development. I enjoy turning ideas
-                into real websites that are useful and user-friendly.
-            </p>
+                        <p className="text-gray-700 leading-relaxed max-w-lg mb-6">
+                            I am a vocational student majoring in Software Engineering (RPL) with a strong passion for web development. I enjoy turning ideas into real websites that are useful, modern, and user-friendly.
+                        </p>
 
-            <p data-aos="fade-up" data-aos-duration="1400" className="text-gray-700 leading-8 mb-8 xl:w-110" >
-                My goal is to become a Full-Stack Developer and study in Australia
-                to gain knowledge, experience, and build a better future.
-            </p>
+                        <p className="text-gray-700 leading-relaxed max-w-lg">
+                            My goal is to become a Full-Stack Developer and study in Australia to gain knowledge, experience, and build a better future.
+                        </p>
+                    </div>
 
+                    {/* Right Grid */}
+                    <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-200 rounded-xl overflow-hidden shadow-lg bg-white">
+                        {aboutItems.map((item, index) => (
+                            <article
+                                key={item.title}
+                                className={`
+                                    flex gap-4 p-6 transition-colors duration-200 hover:bg-gray-50
+                                    ${index === 0 ? "border-b sm:border-r border-gray-200" : ""}
+                                    ${index === 1 ? "border-b border-gray-200" : ""}
+                                    ${index === 2 ? "border-b sm:border-r sm:border-b-0 border-gray-200" : ""}
+                                `}
+                            >
+                                <Icon
+                                    icon={item.icon}
+                                    className="text-blue-600 text-4xl shrink-0 mt-1"
+                                    aria-hidden="true"
+                                />
+
+                                <div>
+                                    <h3 className="font-bold text-lg text-gray-900 mb-1">
+                                        {item.title}
+                                    </h3>
+
+                                    <div className="text-gray-600 text-sm space-y-1">
+                                        {item.description.map((text) => (
+                                            <p key={text}>{text}</p>
+                                        ))}
+                                    </div>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
             </div>
-
-            {/* Right */}
-            <div data-aos="fade-up" data-aos-duration="1400" className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-300 rounded-xl overflow-hidden shadow-xl">
-
-                <div data-aos="fade-up" data-aos-duration="1200" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b sm:border-r">
-                    <Icon
-                    icon="material-symbols:school-outline"
-                    className="text-blue-500 text-5xl xl:w-20"
-                    />
-                    <div>
-                    <h3 className="font-bold text-xl mb-2">Education</h3>
-                    <p className="text-gray-600">
-                        Vocational High School
-                        Software Engineering (RPL)
-                    </p>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="1300" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b ">
-                    <Icon
-                    icon="mdi:map-marker-outline"
-                    className="text-blue-500 w-20 text-5xl"
-                    />
-                    <div className="w-88">
-                    <h3 className="font-bold text-xl mb-2">Location</h3>
-                    <p className="text-gray-600">
-                        Bali,
-                        Indonesia
-                    </p>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="1400" className="flex gap-4 p-6 xl:py-6 xl:px-2 border-b sm:border-b-white sm:border-r">
-                    <Icon
-                    icon="mdi:target"
-                    className="text-blue-500 text-5xl xl:w-20"
-                    />
-                    <div>
-                    <h3 className="font-bold text-xl mb-2">Goal</h3>
-                    <p className="text-gray-600">
-                        Study in Australia
-                        Become Full-Stack Developer
-                    </p>
-                    </div>
-                </div>
-
-                <div data-aos="fade-up" data-aos-duration="1500" className="flex gap-4 p-6 xl:py-6 xl:px-2">
-                    <Icon
-                    icon="mdi:heart-outline"
-                    className="text-blue-500 text-5xl xl:w-20"
-                    />
-                    <div>
-                    <h3 className="font-bold text-xl mb-2">Passion</h3>
-                    <p className="text-gray-600">
-                        Coding,
-                        Problem Solving &
-                        Building Websites
-                    </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
         </section>
     );
-    }
+}
 
-export default About;
+export default memo(About);

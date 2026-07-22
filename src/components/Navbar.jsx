@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import logo from "../assets/logo/logo1.png"
+import logo from "../assets/logo/logo1.webp"
 import GooeyNav from './GooeyNav'
 
 function Navbar() {
