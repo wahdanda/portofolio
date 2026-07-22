@@ -28,7 +28,7 @@ const projects = [
         title: "Savings Tracker",
         image: savings,
         desc: "Manage your income and expenses easily, monitor your balance, and build better financial habits every day.",
-        tech: ["React", "Tailwind", "JavaScript"],
+        tech: ["React", "Tailwind",],
         link: "https://wahdanda.github.io/Buku-Tabungan/",
     },
 ];
