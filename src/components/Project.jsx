@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import project1 from "../assets/img/catur.webp";
 import undangan from "../assets/img/undangan.webp";
 import savings from "../assets/img/savings.webp";
+import electra from "../assets/img/electra-tama.webp"
 
 const projects = [
     {
@@ -30,6 +31,13 @@ const projects = [
         desc: "Manage your income and expenses easily, monitor your balance, and build better financial habits every day.",
         tech: ["React", "Tailwind",],
         link: "https://wahdanda.github.io/Buku-Tabungan/",
+    },
+    {
+        title: "Elektra Tama",
+        image: electra ,
+        desc:"Elektra Tama is here to accompany your digital lifestyle. Since the beginning, we've focused on providing selected tech gadgets and accessories—from earbuds and smartwatches to gaming gear—with proven quality and reasonable prices. Every product we sell goes through a rigorous selection process, is backed by an official warranty, and our customer service is ready to help at any time.",
+        tech: ["HTML","Tailwind","JavaScript"],
+        link: "https://wahdanda.github.io/slicing-web/",
     },
 ];
 
