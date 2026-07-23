@@ -1,4 +1,4 @@
-import{r as e}from"./rolldown-runtime-QTnfLwEv.js";import{i as t,n}from"./index-BHC3eGGH.js";import{Ct as r,Ft as i,It as a,Tt as o,et as s,ft as c,m as l,r as u,ut as d,wt as f}from"./three.module-CUmY3U-d.js";var p=e(t(),1),m=n(),h=8,g=`
+import{r as e}from"./rolldown-runtime-QTnfLwEv.js";import{i as t,n}from"./index-6giPBlM4.js";import{Ct as r,Ft as i,It as a,Tt as o,et as s,ft as c,m as l,r as u,ut as d,wt as f}from"./three.module-CUmY3U-d.js";var p=e(t(),1),m=n(),h=8,g=`
 #define MAX_COLORS ${h}
 uniform vec2 uCanvas;
 uniform float uTime;
