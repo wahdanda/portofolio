@@ -126,3 +126,47 @@ html {
 .animate-marquee {
     animation: marquee 20s linear infinite;
 }
+
+/* Desktop */
+@keyframes project-horizontal {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.animate-project {
+  animation: project-horizontal 25s linear infinite;
+}
+
+.group:hover .animate-project {
+  animation-play-state: paused;
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  @keyframes project-vertical {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(calc(-50% - 1rem));
+    }
+  }
+
+  .animate-project {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    animation: project-vertical 25s linear infinite;
+  }
+}

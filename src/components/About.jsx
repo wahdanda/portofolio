@@ -70,21 +70,21 @@ function About() {
                 <div className="flex flex-col lg:flex-row gap-12 items-center justify-between text-start">
                     {/* Left Text */}
                     <div className="lg:w-1/2">
-                        <h2 className="font-inika text-3xl sm:text-4xl font-bold mb-4 text-gray-900">
+                        <h2 className="font-inika text-3xl sm:text-4xl font-bold mb-4 ">
                             Who I Am
                         </h2>
 
-                        <p className="text-gray-700 leading-relaxed max-w-lg mb-6">
+                        <p className=" leading-relaxed max-w-lg mb-6">
                             I am a vocational student majoring in Software Engineering (RPL) with a strong passion for web development. I enjoy turning ideas into real websites that are useful, modern, and user-friendly.
                         </p>
 
-                        <p className="text-gray-700 leading-relaxed max-w-lg">
+                        <p className=" leading-relaxed max-w-lg">
                             My goal is to become a Full-Stack Developer and study in Australia to gain knowledge, experience, and build a better future.
                         </p>
                     </div>
 
                     {/* Right Grid */}
-                    <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-200 rounded-xl overflow-hidden shadow-lg bg-white">
+                    <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-200 rounded-xl overflow-hidden shadow-lg bg-gray-900">
                         {aboutItems.map((item, index) => (
                             <article
                                 key={item.title}
@@ -102,11 +102,11 @@ function About() {
                                 />
 
                                 <div>
-                                    <h3 className="font-bold text-lg text-gray-900 mb-1">
+                                    <h3 className="font-bold text-lg mb-1">
                                         {item.title}
                                     </h3>
 
-                                    <div className="text-gray-600 text-sm space-y-1">
+                                    <div className="text-sm space-y-1">
                                         {item.description.map((text) => (
                                             <p key={text}>{text}</p>
                                         ))}

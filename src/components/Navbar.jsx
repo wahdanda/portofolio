@@ -131,7 +131,7 @@ function Navbar() {
         </div>
     </nav>
 
-    <div className=" text-white fixed bottom-5 right-0 -ml-40 p-3 grid gap-6 transition duration-300 cursor-pointer z-10 md:bottom-50 md:right-5">
+    <div className=" z-20 text-white fixed bottom-5 right-0 -ml-40 p-3 grid gap-6 transition duration-300 cursor-pointer  md:bottom-50 md:right-5">
        <a
             href="https://github.com/wahdanda"
             target="_blank"
