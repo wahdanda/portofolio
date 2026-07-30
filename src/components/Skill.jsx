@@ -20,6 +20,7 @@
         <section
         id="Skill"
         className="
+        bg-black
         relative
         min-h-screen
         flex

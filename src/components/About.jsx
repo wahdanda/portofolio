@@ -38,7 +38,7 @@ const logos = [
 function About() {
     return (
         <>
-        <div className="overflow-hidden group py-10">
+        <div className="bg-black overflow-hidden group py-10">
             <div className="flex w-max animate-marquee group-hover:paused">
                 {[...logos, ...logos].map((logo, index) => (
                 <div
