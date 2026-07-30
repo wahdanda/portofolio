@@ -24,13 +24,41 @@ const aboutItems = [
     },
 ];
 
+const logos = [
+    { name: "HTML", icon: "vscode-icons:file-type-html", percent: 95 },
+    { name: "CSS", icon: "vscode-icons:file-type-css", percent: 90 },
+    { name: "JavaScript", icon: "logos:javascript", percent: 80 },
+    { name: "React", icon: "logos:react", percent: 75 },
+    { name: "Tailwind CSS", icon: "logos:tailwindcss-icon", percent: 90 },
+    { name: "MySQL", icon: "logos:mysql", percent: 85 },
+    { name: "Figma", icon: "logos:figma", percent: 70 },
+    { name: "WordPress", icon: "skill-icons:wordpress", percent: 70 },
+];
+
 function About() {
     return (
+        <>
+        <div className="overflow-hidden group py-10">
+            <div className="flex w-max animate-marquee group-hover:paused">
+                {[...logos, ...logos].map((logo, index) => (
+                <div
+                    key={index}
+                    className="mx-9 flex flex-col items-center md:mx-19"
+                >
+                    <Icon className="w-10" icon={logo.icon} />
+                    <span className="mt-2 text-sm">
+                    {logo.name}
+                    </span>
+                </div>
+                ))}
+            </div>
+        </div>
         <section
             id="About"
             aria-labelledby="about-title"
-            className="bg-white text-black py-20 px-6 sm:px-10 lg:px-10 xl:px-20"
+            className="bg-black text-white py-20 px-6 sm:px-10 lg:px-10 xl:px-20"
         >
+
             <div className="max-w-7xl mx-auto">
                 <p
                     id="about-title"
@@ -90,6 +118,7 @@ function About() {
                 </div>
             </div>
         </section>
+        </>
     );
 }
 

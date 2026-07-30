@@ -131,9 +131,45 @@ function Navbar() {
         </div>
     </nav>
 
-    <div className="floating fixed bottom-5 right-5 -ml-40 bg-green-500 p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 cursor-pointer z-10">
-        <a href="https://wa.me/6281337514360?Text=hi%20danda" target="_blank" rel="noopener noreferrer">
-            <Icon icon="mdi:whatsapp" height="2em" className="text-white" />
+    <div className=" text-white fixed bottom-5 right-0 -ml-40 p-3 grid gap-6 transition duration-300 cursor-pointer z-10 md:bottom-50 md:right-5">
+       <a
+            href="https://github.com/wahdanda"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="transition hover:text-blue-500 hover:scale-110"
+        >
+            <Icon
+                icon="mdi:github"
+                className="text-2xl"
+                aria-hidden="true"
+            />
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/gusti-ngurah-danda-hasta-7b59a1420"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="transition hover:text-blue-500 hover:scale-110"
+        >
+            <Icon
+                icon="prime:linkedin"
+                className="text-2xl"
+                aria-hidden="true"
+            />
+        </a>
+
+        <a
+            href="mailto:gstngrdandahasta@gmail.com"
+            aria-label="Email"
+            className="transition hover:text-blue-500 hover:scale-110"
+        >
+            <Icon
+                icon="mdi:gmail"
+                className="text-2xl"
+                aria-hidden="true"
+            />
         </a>
     </div>
     </>
