@@ -1,125 +1,182 @@
 import { memo } from "react";
 import { Icon } from "@iconify/react";
 
-const aboutItems = [
-    {
-        icon: "material-symbols:school-outline",
-        title: "Education",
-        description: ["Vocational High School", "Software Engineering (RPL)"],
-    },
-    {
-        icon: "mdi:map-marker-outline",
-        title: "Location",
-        description: ["Bali", "Indonesia"],
-    },
-    {
-        icon: "mdi:target",
-        title: "Goal",
-        description: ["Study in Australia", "Become Full-Stack Developer"],
-    },
-    {
-        icon: "mdi:heart-outline",
-        title: "Passion",
-        description: ["Coding", "Problem Solving", "Building Websites"],
-    },
+const logos = [
+{ name: "HTML", icon: "vscode-icons:file-type-html" },
+{ name: "CSS", icon: "vscode-icons:file-type-css" },
+{ name: "JavaScript", icon: "logos:javascript" },
+{ name: "React", icon: "logos:react" },
+{ name: "Tailwind", icon: "logos:tailwindcss-icon" },
+{ name: "MySQL", icon: "logos:mysql" },
+{ name: "Figma", icon: "logos:figma" },
+{ name: "WordPress", icon: "skill-icons:wordpress" },
 ];
 
-const logos = [
-    { name: "HTML", icon: "vscode-icons:file-type-html", percent: 95 },
-    { name: "CSS", icon: "vscode-icons:file-type-css", percent: 90 },
-    { name: "JavaScript", icon: "logos:javascript", percent: 80 },
-    { name: "React", icon: "logos:react", percent: 75 },
-    { name: "Tailwind CSS", icon: "logos:tailwindcss-icon", percent: 90 },
-    { name: "MySQL", icon: "logos:mysql", percent: 85 },
-    { name: "Figma", icon: "logos:figma", percent: 70 },
-    { name: "WordPress", icon: "skill-icons:wordpress", percent: 70 },
+const skills = [
+{
+    title: "Frontend Development",
+    percent: 95,
+},
+{
+    title: "Backend Development",
+    percent: 80,
+},
+{
+    title: "UI / UX Design",
+    percent: 90,
+},
 ];
+
+function CircularProgress({ percent }) {
+const radius = 54;
+const stroke = 8;
+
+const normalizedRadius = radius - stroke / 2;
+const circumference = normalizedRadius * 2 * Math.PI;
+
+const strokeDashoffset =
+    circumference - (percent / 100) * circumference;
+
+return (
+    <svg width="130" height="130" className="-rotate-90">
+    <circle
+        cx="65"
+        cy="65"
+        r={normalizedRadius}
+        stroke="#2f2f40"
+        strokeWidth={stroke}
+        fill="transparent"
+    />
+
+    <circle
+        cx="65"
+        cy="65"
+        r={normalizedRadius}
+        stroke="#34D399"
+        strokeWidth={stroke}
+        fill="transparent"
+        strokeLinecap="round"
+        strokeDasharray={circumference}
+        strokeDashoffset={strokeDashoffset}
+    />
+
+    <text
+        x="65"
+        y="72"
+        textAnchor="middle"
+        transform="rotate(90 65 65)"
+        className="fill-white"
+        style={{
+        fontWeight: 700,
+        fontSize: 20,
+        }}
+    >
+        {percent}%
+    </text>
+    </svg>
+);
+}
 
 function About() {
-    return (
-        <>
-        <div className="bg-black overflow-hidden group py-10">
-            <div className="flex w-max animate-marquee group-hover:paused">
-                {[...logos, ...logos].map((logo, index) => (
-                <div
-                    key={index}
-                    className="mx-9 flex flex-col items-center md:mx-19"
-                >
-                    <Icon className="w-10" icon={logo.icon} />
-                    <span className="mt-2 text-sm">
-                    {logo.name}
-                    </span>
-                </div>
-                ))}
+return (
+    <>
+    {/* Logo Marquee */}
+    <div className="bg-black overflow-hidden group py-10">
+        <div className="flex w-max animate-marquee group-hover:paused">
+        {[...logos, ...logos].map((logo, index) => (
+            <div
+            key={index}
+            className="mx-10 flex flex-col items-center"
+            >
+            <Icon
+                icon={logo.icon}
+                className="w-10 h-10"
+            />
+
+            <span className="mt-2 text-sm text-white">
+                {logo.name}
+            </span>
             </div>
+        ))}
         </div>
-        <section
-            id="About"
-            aria-labelledby="about-title"
-            className="bg-black text-white py-20 px-6 sm:px-10 lg:px-10 xl:px-20"
-        >
+    </div>
 
-            <div className="max-w-7xl mx-auto">
-                <p
-                    id="about-title"
-                    className="text-blue-600 font-semibold uppercase tracking-widest mb-2 text-sm"
-                >
-                    About Me
-                </p>
+    {/* About */}
+    <section
+        id="About"
+        className="bg-black text-white py-20 px-6 lg:px-20"
+    >
+        <p className="uppercase tracking-widest text-emerald-400 font-semibold text-sm text-center mb-7">
+            About Me
+        </p>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-6">
 
-                <div className="flex flex-col lg:flex-row gap-12 items-center justify-between text-start">
-                    {/* Left Text */}
-                    <div className="lg:w-1/2">
-                        <h2 className="font-inika text-3xl sm:text-4xl font-bold mb-4 ">
-                            Who I Am
-                        </h2>
+        {/* Heading */}
+        <div className="mb-20 text-start">
+            
 
-                        <p className=" leading-relaxed max-w-lg mb-6">
-                            I am a vocational student majoring in Software Engineering (RPL) with a strong passion for web development. I enjoy turning ideas into real websites that are useful, modern, and user-friendly.
-                        </p>
+            <h2 className="font-inika text-4xl font-bold mt-2">
+            Who I Am
+            </h2>
 
-                        <p className=" leading-relaxed max-w-lg">
-                            My goal is to become a Full-Stack Developer and study in Australia to gain knowledge, experience, and build a better future.
-                        </p>
-                    </div>
+            <p className="mt-6 text-gray-300 max-w-2xl leading-8">
+            I am a vocational student majoring in Software Engineering
+            (RPL) with a strong passion for web development. I enjoy
+            turning ideas into modern, responsive, and user-friendly
+            websites.
 
-                    {/* Right Grid */}
-                    <div className="lg:w-1/2 w-full grid grid-cols-1 sm:grid-cols-2 border border-gray-200 rounded-xl overflow-hidden shadow-lg bg-gray-900">
-                        {aboutItems.map((item, index) => (
-                            <article
-                                key={item.title}
-                                className={`
-                                    flex gap-4 p-6 transition-colors duration-200 hover:bg-gray-50
-                                    ${index === 0 ? "border-b sm:border-r border-gray-200" : ""}
-                                    ${index === 1 ? "border-b border-gray-200" : ""}
-                                    ${index === 2 ? "border-b sm:border-r sm:border-b-0 border-gray-200" : ""}
-                                `}
-                            >
-                                <Icon
-                                    icon={item.icon}
-                                    className="text-blue-600 text-4xl shrink-0 mt-1"
-                                    aria-hidden="true"
-                                />
+            <br />
+            <br />
 
-                                <div>
-                                    <h3 className="font-bold text-lg mb-1">
-                                        {item.title}
-                                    </h3>
+            My goal is to become a Full-Stack Developer and study in
+            Australia to gain knowledge, experience, and build a better
+            future.
+            </p>
+        </div>
 
-                                    <div className="text-sm space-y-1">
-                                        {item.description.map((text) => (
-                                            <p key={text}>{text}</p>
-                                        ))}
-                                    </div>
-                                </div>
-                            </article>
-                        ))}
-                    </div>
-                </div>
+        {/* Skills */}
+        <div className="grid gap-10 md:grid-cols-2">
+        {skills.map((skill, index) => (
+            <div
+            key={skill.title}
+            className={`
+                rounded-3xl
+                border
+                border-white/10
+                bg-[#171526]
+                p-1
+                text-center
+                transition
+                duration-300
+                hover:-translate-y-3
+                hover:border-emerald-400
+                hover:shadow-emerald-200
+
+                ${
+                index === 2
+                    ? "md:col-span-2 md:w-1/2 md:mx-auto"
+                    : ""
+                }
+            `}
+            >
+            <div className="flex justify-center">
+                <CircularProgress percent={skill.percent} />
             </div>
-        </section>
-        </>
-    );
+
+            <h3 className="text-3xl font-bold mt-6 md:text-xl">
+                {skill.title}
+            </h3>
+
+            <p className="mt-4 text-gray-400">
+                {skill.desc}
+            </p>
+            </div>
+        ))}
+        </div>
+        </div>
+    </section>
+    </>
+);
 }
 
 export default memo(About);
