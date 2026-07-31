@@ -18,12 +18,11 @@ function Navbar() {
     <div className=" mx-auto flex justify-between  items-center px-6 py-5 xl:px-20">
 
         <h1 className="text-2xl font-bold font-inika flex">
-            <img src={logo} className="w-10 h-10 mr-3"></img>
+            <img src={logo} className="w-10 h-auto mr-3" alt="Logo Danda Hasta" loading="lazy"></img>
         </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 font-lato">
-            <div >
+        <div className="hidden md:flex gap-8 font-lato">
                 <GooeyNav
                     items={items}
                     particleCount={10}
@@ -34,18 +33,17 @@ function Navbar() {
                     timeVariance={100}
                     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
                 />
-                </div>
-        </ul>
+        </div>
 
         {/* Desktop Button */}
-        <button className="hidden md:block border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 transition hover:border-white  hover:-translate-y-1 ease-in-out hover:scale-110 duration-300">
-            <a href={`${import.meta.env.BASE_URL}CV.pdf`}>Download CV</a>
-        </button>
+            <a className="hidden md:block border border-emerald-400 px-6 py-3 rounded-lg hover:bg-emerald-400 transition hover:border-white  hover:-translate-y-1 ease-in-out hover:scale-110 duration-300" href={`${import.meta.env.BASE_URL}CV.pdf`}>Download CV</a>
+        
 
         {/* Hamburger */}
         <button
             className="md:hidden text-3xl"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation menu"
         >
             <Icon
                 icon={menuOpen ? "mdi:close" : "mdi:menu"}
@@ -117,7 +115,7 @@ function Navbar() {
             </a>
 
             <button
-            className={`w-[90%] bg-blue-500 py-3 rounded-xl font-semibold hover:bg-blue-600 transition-all duration-500 ${
+            className={`w-[90%] bg-emerald-300 py-3 rounded-xl font-semibold hover:bg-emerald-300 transition-all duration-500 ${
                 menuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
             style={{ transitionDelay: "600ms" }}
@@ -137,7 +135,7 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="transition hover:text-blue-500 hover:scale-110"
+            className="transition hover:text-emerald-400 hover:scale-110"
         >
             <Icon
                 icon="mdi:github"
@@ -151,7 +149,7 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="transition hover:text-blue-500 hover:scale-110"
+            className="transition hover:text-emerald-300 hover:scale-110"
         >
             <Icon
                 icon="prime:linkedin"
@@ -163,7 +161,7 @@ function Navbar() {
         <a
             href="mailto:gstngrdandahasta@gmail.com"
             aria-label="Email"
-            className="transition hover:text-blue-500 hover:scale-110"
+            className="transition hover:text-emerald-400 hover:scale-110"
         >
             <Icon
                 icon="mdi:gmail"

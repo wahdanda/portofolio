@@ -1,8 +1,10 @@
-import { memo, useRef } from "react";
+import { memo, useRef, lazy, Suspense } from "react"; // 1. Tambahkan lazy & Suspense di sini
 import { Icon } from "@iconify/react";
 
 import TextType from "./TextType";
-import Galaxy from "./Galaxy";
+
+// 2. Sesuaikan path import (karena Hero dan Galaxy berada di folder yang sama)
+const Galaxy = lazy(() => import('./Galaxy'));
 
 function Hero() {
     const heroRef = useRef(null);
@@ -16,27 +18,28 @@ function Hero() {
             data-aos-duration="1200"
             className="relative overflow-hidden bg-black text-white min-h-screen flex items-center justify-center px-6 outline-1 sm:px-10 xl:px-20"
         >
-            {/* Background Galaxy */}
-            <div className="absolute inset-0 -z-10">
-                <Galaxy
-                    mouseRepulsion
-                    mouseInteraction
-                    density={1}
-                    glowIntensity={0.3}
-                    saturation={0}
-                    hueShift={140}
-                    twinkleIntensity={0.3}
-                    rotationSpeed={0.1}
-                    repulsionStrength={2}
-                    autoCenterRepulsion={0}
-                    starSpeed={0.5}
-                    speed={1}
-                />
-            </div>
+            {/* Background Galaxy dengan Lazy Loading */}
+            <Suspense fallback={<div className="text-gray-500">Loading 3D...</div>}>
+                <div className="absolute inset-0 -z-10">
+                    <Galaxy
+                        mouseRepulsion
+                        mouseInteraction
+                        density={1}
+                        glowIntensity={0.3}
+                        saturation={0}
+                        hueShift={140}
+                        twinkleIntensity={0.3}
+                        rotationSpeed={0.1}
+                        repulsionStrength={2}
+                        autoCenterRepulsion={0}
+                        starSpeed={0.5}
+                        speed={1}
+                    />
+                </div>
+            </Suspense>
 
             {/* Hero Content */}
             <div className="relative z-10 text-center max-w-3xl">
-
                 <p className="mb-4 font-lato text-base sm:text-lg">
                     Hello, I'm
                 </p>
@@ -48,7 +51,7 @@ function Hero() {
                     Gusti Ngurah Danda Hasta
                 </h1>
 
-                <h2 className="mt-3 font-inika font-bold text-blue-500 text-3xl md:text-4xl lg:text-5xl">
+                <h2 className="mt-3 font-inika font-bold text-emerald-400 text-3xl md:text-4xl lg:text-5xl">
                     <TextType
                         text={["Web Developer"]}
                         typingSpeed={130}
@@ -68,7 +71,7 @@ function Hero() {
                 <a
                     href="#Project"
                     aria-label="View My Projects"
-                    className="inline-flex items-center gap-3 mt-10 bg-blue-500 px-8 py-4 rounded-xl transition-all duration-300 hover:bg-blue-600 hover:-translate-y-1 hover:scale-105"
+                    className="inline-flex items-center gap-3 mt-10 bg-emerald-400 text-zinc-900 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:bg-emerald-600 hover:-translate-y-1 hover:scale-105"
                 >
                     View My Work
 

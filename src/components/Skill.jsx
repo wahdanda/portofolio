@@ -42,7 +42,7 @@
     rotation={-10}
     itemSize={72}
     showPath
-    pathColor="rgba(255,255,255,.12)"
+    pathColor="#fff"
     pathWidth={2}
     centerContent={
         <div className="relative flex items-center justify-center">
@@ -66,6 +66,8 @@
                 <img
                     src={profile}
                     className="w-full h-full object-cover"
+                    alt="Foto Profil Gusti Ngurah Danda Hasta"
+                    loading="lazy"
                 />
             </div>
 

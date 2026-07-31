@@ -66,7 +66,7 @@ const projects = [
         <div className="relative z-10">
 
             <div className="text-center mb-16">
-            <p className="uppercase tracking-[5px] text-cyan-400 font-semibold">
+            <p className="uppercase tracking-[5px] text-emerald-500 font-semibold">
                 Projects
             </p>
 
@@ -98,7 +98,7 @@ const projects = [
                     transition
                     duration-300
                     hover:-translate-y-3
-                    hover:border-cyan-400
+                    hover:border-emerald-400
                     hover:shadow-cyan-500/30
                     shrink-0
                     "
@@ -108,6 +108,7 @@ const projects = [
                     <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
                         className="w-full h-full object-cover transition duration-500 hover:scale-110"
                     />
                     </div>
@@ -133,8 +134,8 @@ const projects = [
                             rounded-full
                             bg-cyan-500/10
                             border
-                            border-cyan-500/30
-                            text-cyan-300
+                            border-emerald-500/30
+                            text-emerald-300
                             text-xs
                             "
                         >

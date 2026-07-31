@@ -95,23 +95,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Chrome, Edge, Safari */
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: blue;
-    border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: blue;
-}
 
 @keyframes marquee {
     from {
@@ -169,4 +152,18 @@ html {
 
     animation: project-vertical 25s linear infinite;
   }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
 }
