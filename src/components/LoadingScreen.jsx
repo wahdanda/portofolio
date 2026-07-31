@@ -61,14 +61,14 @@ export default function LoadingScreen({ finish }) {
           {/* Progress Bar */}
           <div className="w-72 h-1.25 rounded-full bg-white/10 mt-12 overflow-hidden">
             <motion.div
-              className="h-full bg-cyan-400"
+              className="h-full bg-emerald-400"
               animate={{ width: `${progress}%` }}
               transition={{ ease: "linear" }}
             />
           </div>
 
           <motion.p
-            className="mt-4 text-cyan-300 text-sm"
+            className="mt-4 text-emerald-300 text-sm"
             animate={{ opacity: [0.4, 1, 0.4] }}
             transition={{
               repeat: Infinity,
