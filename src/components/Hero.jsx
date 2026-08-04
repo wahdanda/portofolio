@@ -1,79 +1,64 @@
-import { memo, useRef, lazy, Suspense, useEffect, useState } from "react";
+import { memo, useEffect, useState, lazy, Suspense } from "react";
 import { Icon } from "@iconify/react";
 import TextType from "./TextType";
 
 const Galaxy = lazy(() => import("./Galaxy"));
 
 function Hero() {
-  const heroRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
+  const [showGalaxy, setShowGalaxy] = useState(false);
 
   useEffect(() => {
-    const checkScreen = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+    const isMobile = window.innerWidth < 768;
 
-    checkScreen();
-    window.addEventListener("resize", checkScreen);
+    if (!isMobile) {
+      setShowGalaxy(true);
+      return;
+    }
 
-    return () => window.removeEventListener("resize", checkScreen);
+    const timeout = setTimeout(() => {
+      setShowGalaxy(true);
+    }, 500);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
     <section
-      ref={heroRef}
       id="Hero"
-      aria-labelledby="hero-title"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-      className="relative overflow-hidden bg-black text-white min-h-screen flex items-center justify-center px-6 sm:px-10 xl:px-20"
+      className="relative overflow-hidden bg-black text-white min-h-[100svh] flex items-center justify-center px-6 sm:px-10 xl:px-20"
     >
       {/* Background */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-20 bg-gradient-to-b from-black via-zinc-900 to-black" />
 
-        {/* Desktop */}
-        {!isMobile && (
-          <Suspense
-            fallback={
-              <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black" />
-            }
-          >
+      {/* Galaxy */}
+      {showGalaxy && (
+        <Suspense fallback={null}>
+          <div className="absolute inset-0 -z-10">
             <Galaxy
-              mouseRepulsion
-              mouseInteraction
-              density={1}
-              glowIntensity={0.3}
+              mouseRepulsion={window.innerWidth >= 768}
+              mouseInteraction={window.innerWidth >= 768}
+              density={window.innerWidth < 768 ? 0.45 : 1}
+              glowIntensity={0.25}
               saturation={0}
               hueShift={140}
-              twinkleIntensity={0.3}
-              rotationSpeed={0.1}
-              repulsionStrength={2}
+              twinkleIntensity={0.2}
+              rotationSpeed={0.05}
+              repulsionStrength={1}
               autoCenterRepulsion={0}
-              starSpeed={0.5}
-              speed={1}
+              starSpeed={0.35}
+              speed={0.6}
             />
-          </Suspense>
-        )}
-
-        {/* Mobile */}
-        {isMobile && (
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black">
-            <div className="absolute w-72 h-72 bg-emerald-500/10 rounded-full blur-[120px] left-1/2 -translate-x-1/2 top-20" />
-            <div className="absolute w-72 h-72 bg-cyan-500/10 rounded-full blur-[120px] right-0 bottom-0" />
           </div>
-        )}
-      </div>
+        </Suspense>
+      )}
 
-      {/* Hero Content */}
+      {/* Hero */}
       <div className="relative z-10 text-center max-w-3xl">
         <p className="mb-4 font-lato text-base sm:text-lg">
           Hello, I'm
         </p>
 
-        <h1
-          id="hero-title"
-          className="font-inika font-bold text-4xl md:text-5xl lg:text-6xl"
-        >
+        <h1 className="font-inika font-bold text-4xl md:text-5xl lg:text-6xl">
           Gusti Ngurah Danda Hasta
         </h1>
 
@@ -84,22 +69,24 @@ function Hero() {
             deletingSpeed={130}
             pauseDuration={1200}
             showCursor={false}
-            cursorCharacter="|"
-            variableSpeedEnabled={false}
           />
         </h2>
 
         <p className="mt-6 text-gray-300 leading-8 max-w-2xl mx-auto">
-          I build responsive and modern websites using HTML, CSS, Tailwind CSS,
-          JavaScript, React and MySQL.
+          I build responsive and modern websites using HTML, CSS,
+          Tailwind CSS, JavaScript, React and MySQL.
         </p>
 
         <a
           href="#Project"
-          className="inline-flex items-center gap-3 mt-10 bg-emerald-400 text-zinc-900 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:bg-emerald-600 hover:-translate-y-1 hover:scale-105"
+          className="inline-flex items-center gap-3 mt-10 bg-emerald-400 text-zinc-900 font-bold px-8 py-4 rounded-xl hover:bg-emerald-500 transition"
         >
           View My Work
-          <Icon icon="line-md:arrow-right" width={24} />
+
+          <Icon
+            icon="line-md:arrow-right"
+            width={24}
+          />
         </a>
       </div>
     </section>
