@@ -6,7 +6,7 @@ import project1 from "../assets/img/catur.webp";
 import undangan from "../assets/img/undangan.webp";
 import savings from "../assets/img/savings.webp";
 import electra from "../assets/img/electra-tama.webp"
-import luxestay from "../assets/img/hotel.png"
+import luxestay from "../assets/img/hotel.webp"
 
 const projects = [
     {
