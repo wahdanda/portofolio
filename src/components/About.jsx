@@ -19,7 +19,7 @@ const skills = [
 },
 {
     title: "Backend Development",
-    percent: 80,
+    percent: 40,
 },
 {
     title: "UI / UX Design",

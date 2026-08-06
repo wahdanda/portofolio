@@ -6,6 +6,7 @@ import project1 from "../assets/img/catur.webp";
 import undangan from "../assets/img/undangan.webp";
 import savings from "../assets/img/savings.webp";
 import electra from "../assets/img/electra-tama.webp"
+import luxestay from "../assets/img/luxestay.png"
 
 const projects = [
     {
@@ -36,6 +37,13 @@ const projects = [
         tech: ["HTML", "Tailwind", "JavaScript"],
         link: "https://wahdanda.github.io/slicing-web/",
     },
+    {
+        title: "LuxeStay",
+        image: luxestay,
+        desc: "A modern and responsive landing page for a luxury hotel, showcasing its amenities and services.",
+        tech: ["React", "Tailwind", "Firebase"],
+        link: "https://wahdanda.github.io/hotel/",
+    }
     ];
 
     function Project() {
