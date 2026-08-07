@@ -10,6 +10,8 @@ const logos = [
 { name: "MySQL", icon: "logos:mysql" },
 { name: "Figma", icon: "logos:figma" },
 { name: "WordPress", icon: "skill-icons:wordpress" },
+{ name: "Firebase", icon: "selfhst:firebase" },
+{ name: "Git", icon: "skill-icons:git" },
 ];
 
 const skills = [

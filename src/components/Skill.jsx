@@ -13,6 +13,8 @@
     <Icon icon="logos:mysql" className="w-10 h-10" />,
     <Icon icon="logos:figma" className="w-10 h-10" />,
     <Icon icon="skill-icons:wordpress" className="w-10 h-10" />,
+    <Icon icon="selfhst:firebase" className="w-10 h-10" />,
+    <Icon icon="skill-icons:git" className="w-10 h-10" />,
     ];
 
     function Skill() {
